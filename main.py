@@ -24,7 +24,7 @@ def won(player):
            
     
 # Menu functions
-def newGame(): # Resets variablesfor a new game, and update tkinter widgets.
+def newGame(): # Resets variables for a new game, and update tkinter widgets.
     if messagebox.askyesno("New Game", "Are you sure you want to start a new game?") == True:
         rollButton.config(state = ACTIVE) 
         accumulated = 0
@@ -43,7 +43,7 @@ def newGame(): # Resets variablesfor a new game, and update tkinter widgets.
 def rules():
     rulesWindow = Toplevel()
     rulesWindow.title('Rules')
-    rulesWindow.wm_iconbitmap("icon.ico")
+    rulesWindow.wm_iconbitmap("assets/icon.ico")
     rulesWindow.geometry("200x200")
     message = "Snake eyes is a turn-based game,\nwhere two dice are rolled each turn.\nblah\nblah\nblah"
     Label(rulesWindow, text=message).pack(expand=True, fill=BOTH)
@@ -55,7 +55,7 @@ def special():
         magic = random.randint(0,4)
         specialColour = colours[random.randint(0,4)]
         specialWindow = Toplevel()
-        specialWindow.wm_iconbitmap("icon.ico")
+        specialWindow.wm_iconbitmap("assets/icon.ico")
         specialWindow.config(bg = specialColour)
         if magic == 0:
             specialWindow.geometry("100x100")
@@ -66,7 +66,7 @@ def special():
 def gameOptions():
     optionsWindow = Toplevel()
     optionsWindow.title("Options")
-    optionsWindow.wm_iconbitmap("icon.ico")
+    optionsWindow.wm_iconbitmap("assets/icon.ico")
     optionsWindow.geometry("400x400")
     optionsLabelOne = Label(optionsWindow, text = "Nothing's here yet").pack()
     specialButton = Button(optionsWindow, text = "Special Button", command = special).pack()
@@ -153,16 +153,16 @@ def bankPoints():
 root = Tk()
 root.title("Snake Eyes") # Gives the main window a name
 root.geometry("600x400") # Sets the size of the main window
-root.wm_iconbitmap('icon.ico') # Changes the icon of the windows
+root.wm_iconbitmap('assets/icon.ico') # Changes the icon of the windows
 
 # Images of dice
 diceImages = []
-diceImages.append(PhotoImage(file = "one.gif"))
-diceImages.append(PhotoImage(file = "two.gif"))
-diceImages.append(PhotoImage(file = "three.gif"))
-diceImages.append(PhotoImage(file = "four.gif"))
-diceImages.append(PhotoImage(file = "five.gif"))
-diceImages.append(PhotoImage(file = "six.gif"))
+diceImages.append(PhotoImage(file = "assets/one.gif"))
+diceImages.append(PhotoImage(file = "assets/two.gif"))
+diceImages.append(PhotoImage(file = "assets/three.gif"))
+diceImages.append(PhotoImage(file = "assets/four.gif"))
+diceImages.append(PhotoImage(file = "assets/five.gif"))
+diceImages.append(PhotoImage(file = "assets/six.gif"))
 imageNumberOne = 5
 imageNumberTwo = 5
 
